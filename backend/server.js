@@ -1,8 +1,15 @@
 const userRoutes = require('./routes/userRoutes')
 const { errorHandler } = require('./middlewares/errorMiddleware')
+const connectDB = require('./config/db')
 
+
+// npm packages
 const express = require('express')
 const dotenv = require('dotenv').config()
+const colors = require('colors')
+
+// connect to db
+connectDB();
 
 const PORT = process.env.PORT || 5000
 
